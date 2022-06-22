@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js object</title>
+    <style>
+        body{
+            font-family: 'Roboto', sans-serif; color: #000;;
+        }
+        #container{
+          width: 800px;
+          margin: 50px auto;
+          padding: 20px;
+          width: 50%;
+        }
+        #container h2{
+          text-align: center;
+          color: #045;
+        }
+        #quotecontainer{
+            width: 100%;
+            background: #fff;
+            padding: 10px;
+            margin: 30px auto;
+            text-align: center;
+        }
+        #buttoncontainer{
+            width: 100%;
+            text-align:center;
+        }
+        #quoteButton{
+            width: 200px;
+            margin-top: 10px;
+            border: 2px solid #46b8da;
+            color: #045;
+            font-family: inherit;
+            font-weight: bold;
+            padding: 5px;
+            text-decoration: none;
+            text-align: center;
+        }
+        #quoteButton:hover{
+           cursor: pointer;
+           background: #09c;
+          color: #fff;
+        }
+        #quoteButton:active{
+           cursor: pointer
+        }
+        #quoteButton{
+            display: inline-block;
+        }
+        #quoteGenius{
+            font-style: italic;
+            font-weight: 600;
+            text-align: center;
+        }
+        /*MEDIA QUERIES */
+        @media screen and (max-width:760px) {
+            #quoteButton,#addNew{
+                display: block;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <h2>Java script object</h2>
+    <p id="demo"></p>
+    <script>
+        // create an object
+        const car = {
+            brand: "Hyundai",
+            type: "verma",
+            model: "sx",
+            color: "white",
+            carname:function(){
+                return this.brand+" "+this.type+" "+this.model;
+            }
+        };
+        //Display some data from the object:
+        document.getElementById("demo").innerHTML = car.carname();
+    </script><br><br>
+
+    <div id="container">
+        <h2>Get your Daily Quote</h2>
+        <div id="quotecontainer">
+            <p></p>
+            <p id="quoteGenius"></p>
+        </div><!--end quotecontainer-->
+        <div id="buttoncontainer">
+            <input type="button" id="quoteButton" onclick="myFunction()" value="click me">
+        </div><!-- end buttoncontainer-->
+    </div>
+    <script src="script.js">
+        
+    </script>
+    
+</body>
+</html>
